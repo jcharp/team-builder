@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import ReactDom from 'react-dom';
 import logo from './logo.svg';
 import './App.css';
+import Form from './Form';
 
 
 
@@ -12,7 +13,9 @@ function App() {
   return (
     <div className="App">
       
-      <form>
+      <form onSubmit={event => {
+        event.preventDefault();
+      }}>
         <label>Full name <input onChange={event => setMembers(event.target.value)}
 
       
