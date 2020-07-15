@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ReactDom from 'react-dom';
 import logo from './logo.svg';
 import './App.css';
 
@@ -12,10 +13,9 @@ function App() {
     <div className="App">
       
       <form>
-        <label>Full name
+        <label>Full name <input onChange={event => setMembers(event.target.value)}
 
       
-        <input
           maxLength='30'
           placeholder='name'
           id='nameInput'
@@ -26,11 +26,14 @@ function App() {
 
         <br/>
         <input type="submit"/>
+
         
+
       </form>
 
       
-
+      <h3> Team Roster {members}</h3>
+     
 
 
 
