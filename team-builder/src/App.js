@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-
 import logo from './logo.svg';
 import './App.css';
+import Form from './Form';
 
 function App() {
   // set up state for team members
@@ -30,7 +30,9 @@ function App() {
 
       </form>
 
-      <h3>Team Roster {members} </h3>
+      <h3>Team Roster</h3>
+        <Form  members={members}/>
+
      
     </div>
   );

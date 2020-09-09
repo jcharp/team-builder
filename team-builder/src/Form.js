@@ -2,22 +2,25 @@ import React from 'react';
 import './App.css';
 
 
-function Form() {
-
+function Form(props) {
+    console.log(props);
 return(
   <form>
       <label>
-          Name
-          <imput/>
+          Name : 
+         
+          <imput type="text"/>
       </label>
+    <br/>
 
       <label>
-          Email
-          <input />
+          Email 
+          <input type="email"/>
       </label>
+    <br/>
 
       <label>
-          Rone
+          Role
           <select>
               <option>Backend Developer</option>
               <option>Frontedn Developer</option>
