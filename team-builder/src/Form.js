@@ -1,23 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 
 
 
 function Form(props) {
-    console.log(props);
+    // console.log(props);
+    const [person, setPerson] = useState({name: ""});
+
+    const handleChanges = (event) => {
+      setPerson({name: event.target.value})
+        console.log('evetn', person)
+    }
+
 return(
   <form>
-      <label>
-          Name : 
-         
-          <imput type="text"/>
-      </label>
+      <label htmlFor='name'>Name :</label>
+      <input id="name" type="text" placeholder="Full Name" onChange={handleChanges}/>
+     
     <br/>
 
-      <label>
-          Email 
-          <input type="email"/>
-      </label>
+      <label htmlFor='email'>Email </label>
+      <input id='email' type="email" placeholder='Enter email address'/>
+      
     <br/>
 
       <label>
